@@ -1,0 +1,26 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiang520184/gulp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiang520184/gulp/issues"
+  },
+  "homepage": "https://github.com/qiang520184/gulp#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.2",
+    "gulp-sequence": "^1.0.0",
+    "minimist": "^1.2.5"
+  }
+}
