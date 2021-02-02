@@ -45,7 +45,7 @@ function pull (cb) {
 }
 
 // commit   附加自定义commit的push操作
-var commitdefault = 's'
+var commitdefault = 'gulp4自动提交git'
 function commit (cb) {
   if (!argv.a) {
     commitcon = commitdefault
