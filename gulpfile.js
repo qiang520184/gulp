@@ -52,19 +52,35 @@ function commit (cb) {
   } else {
     var commitcon = argv.a
   }
+  console.log('commit', commitcon)
   exec('git commit -m ' + commitcon, function (err, stdout, stderr) {
     cb(err);
   });
 }
+
 function defaultTask (cb) {
   console.log("gulp配置成功");
   cb();
+}
+
+function commits (cb) {
+  if (!argv.m) {
+    commitcon = ''
+  } else {
+    var commitcon = argv.m
+  }
+  console.log('commit', commitcon, typeof (commitcon), JSON.stringify(argv))
+  // exec('git commit -m ' + commitcon, function (err, stdout, stderr) {
+  //   cb(err);
+  // });
 }
 
 exports.pull = pull;
 exports.add = add;
 exports.commit = commit;
 exports.push = push;
+
+exports.commits = commits;
 
 exports.default = series(defaultTask, add, commit, push);
 //**********************具体使用命令*****************************
